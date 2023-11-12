@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make a Plan</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 20px;
+      
+      background: white;
+      background: linear-gradient(to bottom, white, #FFE0B3);
+    }
+
+    .centered-text {
+      text-align: center;
+      font-size: 24px;
+      
+      
+    }
+
+    .orancentered-text {
+      text-align: center;
+      font-size: 40px;
+      color: orange;
+      font-weight: 600;
+      padding-bottom: 30px;
+
+    }
+
+    h1 {
+      color: #333333;
+      text-align: center;
+    }
+
+    form {
+      width: 800px;
+      
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border: solid;
+      border-color: #fae0d4;
+    }
+
+    .inform {
+      width: 800px;
+      font-size: 40px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border: solid;
+      border-color: #fae0d4;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #결과 {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid none;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+      <div class="orancentered-text">
+        &#127748;
+          Make a Plan
+      </div>
+          
+      <div class="centered-text">
+            
+            Select time
+            </div>
+
+  
+
+            <form>
+                <input type="radio" id="option1" name="choices" value="option1">
+                <label for="option1">00:00-3:00</label>
+
+                <input type="radio" id="option2" name="choices" value="option2">
+                <label for="option2">3:00-6:00</label>
+
+                <input type="radio" id="option3" name="choices" value="option3">
+                <label for="option3">6:00-8:00</label>
+
+                <input type="radio" id="option1" name="choices" value="option1">
+                <label for="option1">8:00-10:00</label>
+
+                <input type="radio" id="option2" name="choices" value="option2">
+                <label for="option2">12:00-14:00</label>
+
+                <input type="radio" id="option3" name="choices" value="option3">
+                <label for="option3">14:00-16:00</label>
+
+                <input type="radio" id="option1" name="choices" value="option1">
+                <label for="option1">16:00-18:00</label>
+
+                <input type="radio" id="option2" name="choices" value="option2">
+                <label for="option2">20:00-22:00</label>
+
+                <input type="radio" id="option3" name="choices" value="option3">
+                <label for="option3">22:00-24:00</label>
+                
+            </form>
+        <div class="centered-text">
+            Your plan
+          </div>
+
+              <form>
+                 <input type="text" name="title">
+                </form>
+            
+        <div class="centered-text">
+            additional
+          </div>
+
+            <form>
+                <input type="radio" id="option7" name="choices" value="option7">
+                <label for="option1">옵션 7</label>
+
+                <input type="radio" id="option8" name="choices" value="option8">
+                <label for="option2">옵션 8</label>
+
+                <input type="radio" id="option9" name="choices" value="option9">
+                <label for="option3">옵션 9</label>
+                
+              </form>
+    </div>
+
+
+    <h2>선택지 만들기</h2>
+
+<select id="mySelect">
+  <option value="선택지 1">선택지 1</option>
+  <option value="선택지 2">선택지 2</option>
+  <option value="선택지 3">선택지 3</option>
+</select>
+
+<p>클릭하면 새로운 선택지가 생성됩니다:</p>
+
+<button onclick="myFunction()">클릭</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect");
+  var option = document.createElement("option");
+  option.text = "새로운 선택지";
+  x.add(option);
+}
+</script>
+
+    
+      
+
+
+    
+    
+    
+
+  <script>
+    function showResult() {
+      var 선택지 = document.querySelector('input[name="choices"]:checked').value;
+      var 결과 = document.getElementById("결과");
+
+      if (선택지 === "옵션1") {
+        결과.innerHTML = "옵션 1을 선택했습니다.";
+      } else if (선택지 === "옵션2") {
+        결과.innerHTML = "옵션 2를 선택했습니다.";
+      } else if (선택지 === "옵션3") {
+        결과.innerHTML = "옵션 3을 선택했습니다.";
+      } else {
+        결과.innerHTML = "선택지를 선택해주세요.";
+      }
+    }
+  </script>
+</body>
+</html>
